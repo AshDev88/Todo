@@ -26,14 +26,14 @@ public class TodoController {
         return "TodoYeppy";
     }
 
-    @GetMapping("/a")
+    @GetMapping("/todo")
     public List<Todo> getAllTodo(){
         List<Todo> todoList = todoService.getAllTodo();
 
         return  todoList;
     }
 
-    @PostMapping("/a")
+    @PostMapping("/todo")
     public void addTodo(@RequestBody TodoDto todoDto){
         todoService.addTodo(todoDto);
 
